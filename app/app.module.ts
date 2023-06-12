@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { MqttModule } from 'ngx-mqtt';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+import { MqttToastComponent } from './mqtt-toast.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule, MqttModule.forRoot({})],
+  declarations: [AppComponent, MqttToastComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
